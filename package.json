@@ -1,0 +1,30 @@
+{
+  "name": "movieql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seyiul/MovieQL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Seyiul/MovieQL/issues"
+  },
+  "homepage": "https://github.com/Seyiul/MovieQL#readme",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3",
+    "node-fetch": "^3.2.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11"
+  },
+  "type": "module"
+}
