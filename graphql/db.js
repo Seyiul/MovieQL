@@ -31,6 +31,19 @@ export const getMovie = async (id) => {
   return movie;
 };
 
+export const searchMovie = async (keyword) => {
+  const {
+    data: {
+      data: { movies },
+    },
+  } = await axios(LIST_MOVIES_URL + `query_term=${keyword}`, {
+    params: {
+      keyword,
+    },
+  });
+  return movies;
+};
+
 export const getSuggestions = async (id) => {
   const {
     data: {

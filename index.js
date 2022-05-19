@@ -15,6 +15,7 @@ const server = new GraphQLServer({
   type Query {
     movies(limit: Int, rating: Float): [Movie]!
     movie(id: Int!): Movie
+    searching(keyword:String!):[Movie]
     suggestions(id: Int!): [Movie]!
   }
   `,
