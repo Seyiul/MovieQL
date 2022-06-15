@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js",
-    "dev": "nodemon --exec babel-node index.js"
+    "start": "node build/index.js",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "babel src --out-dir build"
+
   },
   "repository": {
     "type": "git",
@@ -20,12 +22,14 @@
   "dependencies": {
     "axios": "^0.26.1",
     "graphql-yoga": "^1.18.3",
-    "node-fetch": "^3.2.3"
+    "node-fetch": "^3.2.3",
+    "@babel/cli": "^7.17.10"
+
   },
   "devDependencies": {
     "@babel/core": "^7.17.7",
     "@babel/node": "^7.16.8",
-    "@babel/preset-env": "^7.16.11"
-  },
-  "type": "module"
+    "@babel/preset-env": "^7.16.11",
+    "babel-preset-env": "^1.7.0"
+  }
 }
