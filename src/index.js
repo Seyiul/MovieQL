@@ -1,7 +1,11 @@
 import { GraphQLServer } from "graphql-yoga";
 import resolvers from "./graphql/resolvers.js";
+import cors from 'cors';
 
 const server = new GraphQLServer({
+  cors:{
+    origin:'*'
+  },
   typeDefs: `type Movie {
     id: Int!
     title: String!
@@ -21,5 +25,8 @@ const server = new GraphQLServer({
   `,
   resolvers,
 });
+
+const app = express();
+app.use(cors());
 
 server.start(() => console.log("Graphql Server Running"));
